@@ -1,0 +1,4 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oxc-project/oxlint/main/playground/schema.json",
+  "ignorePatterns": ["node_modules", ".output", ".wxt", "assets", "dist"]
+}

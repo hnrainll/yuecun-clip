@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>阅存 · 文章保存器</title>
+    <style>
+      body {
+        width: 260px;
+        padding: 16px;
+        font:
+          13px/1.6 system-ui,
+          sans-serif;
+        color: #0f1419;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0 0 8px;
+      }
+      p {
+        margin: 0 0 12px;
+        color: #536471;
+      }
+      button {
+        width: 100%;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 999px;
+        background: #1d9bf0;
+        color: #fff;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #1a8cd8;
+      }
+      #save {
+        margin-top: 8px;
+        background: #536471;
+      }
+      #save:hover {
+        background: #38444d;
+      }
+      #save-long {
+        margin-top: 8px;
+        background: #0f1419;
+      }
+      #save-long:hover {
+        background: #303840;
+      }
+      #status {
+        margin-top: 8px;
+        min-height: 1em;
+        color: #00ba7c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>阅存 · 文章保存器</h1>
+    <p>收藏好文章，留待慢慢读。支持 X 推文、X 文章和微信公众号文章，保存为离线 HTML 或 PDF。</p>
+    <button id="save-html" type="button">保存单个 HTML</button>
+    <button id="save" type="button">保存当前页为 PDF</button>
+    <button id="save-long" type="button">连续长页 PDF</button>
+    <p id="status"></p>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

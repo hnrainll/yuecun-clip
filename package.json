@@ -1,0 +1,36 @@
+{
+  "name": "x-pdf-chrome",
+  "version": "0.0.1",
+  "description": "阅存 · 文章保存器：将 X/Twitter 推文、文章和微信公众号文章统一排版，保存为离线 HTML 或 PDF",
+  "homepage": "https://github.com/hnrainll/yuecun-clip",
+  "bugs": {
+    "url": "https://github.com/hnrainll/yuecun-clip/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hnrainll/yuecun-clip.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:chrome": "wxt -b chrome",
+    "build": "wxt build",
+    "build:chrome": "wxt build -b chrome",
+    "zip": "wxt zip",
+    "preview": "wxt preview",
+    "prepare": "wxt prepare",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "typecheck": "tsc --noEmit",
+    "test:reading": "vite --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0",
+    "typescript": "^7.0.2",
+    "wxt": "^0.21.5"
+  },
+  "packageManager": "pnpm@12.18.0"
+}

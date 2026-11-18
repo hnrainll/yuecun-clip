@@ -1,0 +1,12 @@
+node_modules/
+.output/
+.wxt/
+*.log
+*.zip
+.DS_Store
+.env
+.env.*
+!.env.example
+/store/
+/design/
+/.local/
