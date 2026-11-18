@@ -101,3 +101,7 @@ pnpm zip -b chrome
 ```
 
 安装 ZIP 生成于 `.output/`，用于本地安装、商店上传或 GitHub Releases，不提交到源码仓库。
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE)，Copyright (c) 2026 hnrainll。
