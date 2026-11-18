@@ -51,6 +51,7 @@ make            # 显示所有目标
 make install    # 安装依赖
 make dev.chrome # 开发模式（Chrome）
 make build.chrome
+make zip.chrome # 构建并打包 Chrome 扩展
 make check      # format-check + lint + typecheck
 make verify     # check + 构建
 make clean      # 删除 .output / .wxt
@@ -98,9 +99,23 @@ wxt.config.ts                  # WXT / manifest 配置
 
 ```bash
 pnpm zip -b chrome
+# 或
+make zip.chrome
 ```
 
 安装 ZIP 生成于 `.output/`，用于本地安装、商店上传或 GitHub Releases，不提交到源码仓库。
+
+ZIP 默认文件名取自 `package.json` 的 `name`、版本号和目标浏览器，当前为 `x-pdf-chrome-0.0.1-chrome.zip`。如需改名，可修改 `package.json` 的 `name`，或在 `wxt.config.ts` 中设置 `zip: { name: "yuecun-clip" }`。扩展显示名称由 manifest 的 `name` 单独控制。
+
+## 跨机器同步
+
+使用 rsync 的排除规则跳过依赖目录；`.gitignore` 不会被 rsync 自动读取：
+
+```bash
+rsync -av --exclude='node_modules/' /本机路径/yuecun-clip/ 用户名@目标机器:/目标路径/yuecun-clip/
+```
+
+源目录末尾的 `/` 表示同步目录内的内容。目标机器同步完成后，在项目目录运行 `pnpm install` 安装该机器所需依赖。若也不需要同步构建产物，可追加 `--exclude='.output/' --exclude='.wxt/'`。
 
 ## 许可证
 

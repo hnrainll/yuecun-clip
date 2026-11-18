@@ -5,8 +5,10 @@ PNPM ?= pnpm
 
 .DEFAULT_GOAL := help
 
+-include .local/Makefile
+
 help: ## 显示本帮助
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
+	@grep -hE '^[a-zA-Z_.-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 
 install: ## 安装依赖（自动执行 wxt prepare）
@@ -28,7 +30,7 @@ zip: ## 打包（默认浏览器）
 	$(PNPM) zip
 
 zip.chrome: ## 打包（Chrome）
-	$(PNPM) zip:chrome
+	$(PNPM) zip -b chrome
 
 preview: ## 预览构建产物
 	$(PNPM) preview
