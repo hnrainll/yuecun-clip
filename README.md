@@ -105,7 +105,7 @@ make zip.chrome
 
 安装 ZIP 生成于 `.output/`，用于本地安装、商店上传或 GitHub Releases，不提交到源码仓库。
 
-ZIP 默认文件名取自 `package.json` 的 `name`、版本号和目标浏览器，当前为 `x-pdf-chrome-0.0.1-chrome.zip`。如需改名，可修改 `package.json` 的 `name`，或在 `wxt.config.ts` 中设置 `zip: { name: "yuecun-clip" }`。扩展显示名称由 manifest 的 `name` 单独控制。
+ZIP 名称已在 `wxt.config.ts` 中通过 `zip: { name: "yuecun-clip" }` 配置，当前输出为 `yuecun-clip-0.0.1-chrome.zip`。扩展显示名称由 manifest 的 `name` 单独控制。
 
 ## 跨机器同步
 

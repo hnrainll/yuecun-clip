@@ -1,6 +1,9 @@
 import { defineConfig } from "wxt";
 
 export default defineConfig({
+  zip: {
+    name: "yuecun-clip",
+  },
   manifest: {
     name: "阅存 · 文章保存器",
     short_name: "阅存",
