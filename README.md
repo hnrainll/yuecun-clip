@@ -49,11 +49,11 @@ pnpm preview        # 预览构建产物
 ```bash
 make            # 显示所有目标
 make install    # 安装依赖
-make dev.chrome # 开发模式（Chrome）
-make build.chrome
-make zip.chrome # 构建并打包 Chrome 扩展
-make check      # format-check + lint + typecheck
-make verify     # check + 构建
+make dev        # 开发 Chrome 扩展
+make build      # 构建 Chrome 扩展
+make zip        # 构建并打包 Chrome 扩展（上传商店用）
+make check      # 检查格式、lint 和类型
+make format     # 格式化代码
 make clean      # 删除 .output / .wxt
 ```
 
@@ -98,9 +98,9 @@ wxt.config.ts                  # WXT / manifest 配置
 ## 打包
 
 ```bash
-pnpm zip -b chrome
+pnpm zip
 # 或
-make zip.chrome
+make zip
 ```
 
 安装 ZIP 生成于 `.output/`，用于本地安装、商店上传或 GitHub Releases，不提交到源码仓库。
